@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <title>   </title>
+          <style type="text/css">
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                background-color:rgb(58, 57, 65);
+                background-position: center;
+                background-size: cover;
+                font-family: sans-serif;
+                margin-top:40px;
+            }
+            .pov{
+                width:800px;
+                background-color: rgb(0,0,0,6);
+                margin: auto;
+                color: #FFFFFF;
+                padding: 10px 0px 10px 0px;
+                text-align: center;
+                border-radius: 15px 15px 0px opx;
+            }
+            .main{
+                background-color: rgba(108, 105, 106, 0.5);
+                width: 800px;
+                margin: auto;
+            }
+            form{
+                padding: 10px;
+            }
+            #name{
+                width: 100%;
+                height: 100px;
+            }
+            .name{
+                margin-left: 25px;
+                margin-top: 30px;
+                width: 355px;
+                color: white;
+                font-size: 10px;
+                font-weight: 700;
+            }
+            .option{
+                position: relative;
+                left: 200px;
+                top: -30px;
+                line-height:160px;
+                border-radius: 20px;
+                padding: 0,22px;
+                font-size: 16px;
+                height: 50px;         
+            }
+            .muncipalities{
+                position: relative;
+                left: 200px;
+                top: -45px;
+                line-height:40px;
+                width: 480px;
+                border-radius: 6px;
+                padding: 0,22px;
+                font-size: 16px ;
+                color: rgb(20, 17, 17);
+            }
+            .option1{
+                position: relative;
+                left: 200px;
+                top: -37px;
+                line-height:100px;
+                border-radius: 15px;
+                padding: 0,20px;
+                font-size: 16px;
+                height: 45px;         
+            }
+            
+            .homes{
+                position: relative;
+                left: 200px;
+                top: -37px;
+                line-height:40px;
+                width: 480px;
+                border-radius: 6px;
+                padding: 0,22px;
+                font-size: 16px ;
+                color: rgb(20, 17, 17);
+            }
+            .mg{
+                position: relative;
+                left: 200px;
+                top: -37px;
+                line-height:40px;
+                width: 480px;
+                border-radius: 6px;
+                padding: 0,22px;
+                font-size: 16px ;
+                color: rgb(20, 17, 17);
+            }
+            .water{
+                position: relative;
+                left: 200px;
+                top: -37px;
+                line-height:40px;
+                width: 480px;
+                border-radius: 6px;
+                padding: 0,22px;
+                font-size: 16px ;
+                color: rgb(20, 17, 17);
+            }
+            .sb{
+                position: relative;
+                left: 200px;
+                top: -37px;
+                line-height:40px;
+                width: 480px;
+                border-radius: 6px;
+                padding: 0,22px;
+                font-size: 16px ;
+                color: rgb(20, 17, 17);
+            }
+            .radio{
+                display: inline-block;
+                padding-right:70px ;
+                font-size: 15px;
+                margin-left: 25px;
+                margin-top: 10px;
+                color:rgb(9, 9, 9);
+            }
+            .radio input{
+                width: 20px;
+                height: 20px;
+                margin-top: 10px;
+                border-radius: 50%;
+                cursor: pointer; 
+                outline: none;         
+            }
+            button{
+                background-color: rgb(36, 36, 36);
+                display: block;
+                margin: 20px 0px 0px 20px;
+                text-align: center;
+                border-radius: 12px;
+                border: 2px solid #0e0e0e;
+                padding: 14px 110px;
+                color: #FFFFFF;
+                cursor: pointer;
+                transition: 0.25px;
+            }
+            button:hover{
+                background-color: #4a4642;
+
+            }
+          </style>        
+        
+    </head>
+    <body>
+        <div class="pov"><h1> CLEAN WATER AND SANITIZATION </h1></div>
+        <div class="main">
+            <form>
+                <div id = "name">
+                    <h2 class="name" style="font-size: 15px;">Name Of The District </h2>
+                    <select class="option" name=" Name Of The District" style="width: 480px;">
+                        <option disabled="disabled" selected="selected">--choose option</option>
+                        <option> Srikakulam    </option>
+                        <option> Vizianagaram  </option>
+                        <option> Vishakapatnam  </option>
+                        <option> East Godavari   </option>
+                        <option> West Godavari    </option>
+                        <option> Krishna    </option>
+                        <option> Guntur    </option>
+                        <option> Prakasam    </option>
+                        <option> Nellore    </option>
+                        <option> Kurnool    </option>
+                        <option> Anathapur    </option>
+                        <option> Chittor    </option>
+                        <option> Y.S.R Kadapa   </option>
+                    </select>                    
+                </div>
+            <h2 class="name" style="font-size: 15px;">No. of muncipalities  </h2>
+            <input class ="muncipalities" type = "text" placeholder="muncipalities number EX: 2,3,4" name="muncipalities"><br>
+
+            <h2 class="name" style="font-size: 15px;">Muncipality Grades </h2>
+            <select class="option1" name=" Muncipality Grade" style="width: 480px;">
+                <option disabled="disabled" selected="selected">--choose option</option>
+                <option> Grade1   </option>
+                <option> Grade2 </option>
+                <option> Grade3 </option>
+            </select>
+            <h2 class="name" style="font-size: 15px;">No. of houses </h2>
+            <input class ="homes" type = "text" placeholder="In Lakhs" name="homes"><br>
+
+            <h2 class="name" style="font-size: 12px;">Houses using Muncipalwater</h2>
+            <input class ="mg" type = "text" placeholder="Percentage of houses using Muncipal water" name="mg"><br>
+
+            <h2 class="name" style="font-size: 15px;">water </h2>
+            <input class ="water" type = "text" placeholder="No. of litres of water releasing per day" name="water"><br>
+
+            <h2 class="name" style="font-size: 15px;">Subha Battery </h2>
+            <input class ="sb" type = "text" placeholder="No. of garbage collecting vehicles" name="sb"><br>
+
+            <h3 id="sanity" style="color: #FFFFFF;">IS Garbages clean Everyday? </h3>
+            <label class="radio" >
+            <input class ="radio-one" type = "radio" checked="checked" value="y" name="sanity">
+            <span class="checkmark"></span>
+              Yes
+            </label><br>
+            <label class="radio"  >
+            <input class ="radio-one" type = "radio" value="n" name="sanity">
+            <span class="checkmark"></span>
+              NO
+            </label><br>
+
+            <h3 id="sanity1" style="color: #FFFFFF;">IS Drinages clean everyday?</h3>
+            <label class="radio" >
+            <input class ="radio-one" type = "radio" checked="checked" value='y' name="sanity1">
+            <span class="checkmark"></span>
+              Yes
+            </label><br>
+            <label class="radio" >
+            <input class ="radio-one" type = "radio" value='n' name="sanity1">
+            <span class="checkmark"></span>
+              NO
+            </label>
+            
+            <button type="Submit" style="font-size: 15px;">Submit </button>
+            </form>
+        </div>
+    </body>
+</html>

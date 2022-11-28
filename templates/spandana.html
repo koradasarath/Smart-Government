@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #61864e;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;  
+}
+.option1{
+  position: relative;
+  left: 200px;
+  top: -37px;
+  line-height:100px;
+  border-radius: 15px;
+  padding: 0,20px;
+  font-size: 16px;
+  height: 45px;         
+}
+
+.radio{
+  display: inline-block;
+  padding-right:70px ;
+  font-size: 15px;
+  margin-left: 25px;
+  margin-top: 10px;
+  color:rgb(9, 9, 9);
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #57b06c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #62c86e;
+}
+</style>
+<body>
+
+<form id="regForm" action="">
+  <h1>Spandana Survey Details</h1>
+  <!-- One "tab" for each step in the form: -->
+<div>
+  <div class="tab">
+    <h2 class="name">Name</h2>
+    <p><input placeholder="Enter Full NAme" oninput="this.className = ''" name="fname" required></p>
+    
+    <h2 class="name">Aadhar Number </h2>
+    <input  type = "text" placeholder="Enter Aadharnumber" name="">
+
+    <h2 class="name">Email Id </h2>
+    <input  type = "text" placeholder="Enter emailid" name="">
+
+    <h2 class="name">Contact </h2>
+    <input  type = "text" placeholder="Enter Phone number" name="" required>
+
+    <h2 class="name">Address</h2>
+    <input  type = "textarea" placeholder="enter full Address" name="" required>
+    
+    <h2 class="name">City </h2>
+      <select class="option" name="City" style="width: 480px; height: 30px;" required>
+          <option disabled="disabled" selected="selected">--choose option</option>
+          <option> Srikakulam    </option>
+          <option> Vizianagaram  </option>
+          <option> Vishakapatnam  </option>
+          <option> East Godavari   </option>
+          <option> West Godavari    </option>
+          <option> Krishna    </option>
+          <option> Guntur    </option>
+          <option> Prakasam    </option>
+          <option> Nellore    </option>
+          <option> Kurnool    </option>
+          <option> Anathapur    </option>
+          <option> Chittor    </option>
+          <option> Y.S.R Kadapa   </option>
+      </select> 
+    <h2 class="name">pincode</h2>
+    <input  type = "text" placeholder="Enter pin" name="">
+  
+    <h3 id="name">Mode of Case Registration?</h3>
+    <label for="off">offline</label>
+    <input class="radio" type="radio" id="name" checked>
+    <label for="on">online</label>
+    <input class="radio" type="radio" id="name">
+      
+   </div> 
+<div>
+  <div class="tab">
+    <h2 class="name"> Case Id</h2>
+    <input type = "text" placeholder="Enter Case Numebr" name="" required>
+    
+    <h2 class="name">Priority of case</h2>
+      <select class="option" name="pc" style="width: 480px; height: 30px;" required>
+          <option disabled="disabled" selected="selected">--choose option</option>
+          <option> General </option>
+          <option> Medium</option>
+          <option> Other </option>
+      </select> 
+      
+      <h2 id="name">Type of case Grievances </h2>
+      <input type="checkbox" id="GG" name="Gg" value="">
+      <label for="vehicle1"> General </label><br>
+      <input type="checkbox" id="ss" name="ss" value="">
+      <label for="vehicle2"> Sand and Excise</label><br>
+      <input type="checkbox" id="cc" name="cc" value="">
+      <label for="vehicle3">Corruption</label><br>
+      <input type="checkbox" id="rb" name="rb" value="">
+      <label for="vehicle1">Rythu Barosha</label><br>
+      <input type="checkbox" id="sr" name="sr" value="">
+      <label for="vehicle2"> Sachivalayam/Ward register</label><br><br>
+      
+      <label for="case"><h2>Case-Filed Date</h2></label>
+      <input type="date"  id="case" name="case" required>
+
+      <h2 class="name">status of case</h2>
+      <select class="option" name="pc" style="width: 480px; height: 30px;" required>
+          <option disabled="disabled" selected="selected">--choose option</option>
+          <option> Pending </option>
+          <option> Solved</option>
+      </select> <br><br>
+
+      <label for="case" ><h2>Case-Closed Date</h2></label>
+      <input type="date"  id="case" name="case" required>
+
+      <h2 class="name">No. of days</h2>
+      <input  type = "text" placeholder="Days after the case file" name="" required><br><br>
+
+  </div>
+</div>
+<div>
+  <div class="tab">
+    <h2 class="name">Remarks</h2>
+    <input type="text" placeholder="enter case details" name="" required>
+
+    <h2 class="name">Choose File</h2>
+    <input type="file" placeholder="select one file" name="" required><br><br>
+  </div>
+</div>
+<div>
+  <div class="tab">
+    <h2 class="name">Any queries?</h2>
+    <input type="text" placeholder="fill the queries" name=""><br><br>
+  </div>
+</div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+</form>
+
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  /*for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }*/
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+
+</body>
+</html>
